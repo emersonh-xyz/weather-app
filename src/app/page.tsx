@@ -3,6 +3,7 @@ import { Sun } from 'lucide-react'
 import Image from "next/image";
 import WeatherCard from "./components/weather/weather-card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
         }}
           className="w-full" >
           <CarouselContent >
-            <CarouselItem className="lg:basis-1/4"><WeatherCard location="London" temperature={20} rainChance={30} /> </CarouselItem >
+            <CarouselItem className="lg:basis-1/4"><Link href="/details-page"><WeatherCard location="London" temperature={20} rainChance={30} /></Link> </CarouselItem >
             <CarouselItem className="lg:basis-1/4"><WeatherCard location="New York" temperature={25} rainChance={20} /></CarouselItem >
             <CarouselItem className="lg:basis-1/4"><WeatherCard location="Paris" temperature={30} rainChance={10} /></CarouselItem >
             <CarouselItem className="lg:basis-1/4"><WeatherCard location="Berlin" temperature={15} rainChance={40} /></CarouselItem >
