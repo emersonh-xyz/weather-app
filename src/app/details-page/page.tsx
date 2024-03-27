@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 export default function Details() {
   return (
     <div className="h-screen flex flex-col">
-      <div className="grid grid-rows-2 pt-4 px-8 sm:px-16 xl:px-64 pb-2 gap-4 grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-rows-3 md:grid-rows-2 pt-4 px-8 sm:px-16 xl:px-64 pb-2 gap-4 grid-cols-1 md:grid-cols-3">
         <div className="row-span-2">
           <WeatherCard location="London" temperature={20} rainChance={30}/>
         </div>
