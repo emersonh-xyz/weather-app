@@ -1,5 +1,5 @@
 'use client';
-
+import Link from 'next/link'
 import { Input } from "@/components/ui/input";
 
 export default function NavMenu() {
@@ -8,7 +8,7 @@ export default function NavMenu() {
             <div>
                 <Input placeholder="Enter a location" />
             </div>
-            <h1 className="font-bold text-white text-2xl">Weather App</h1>
+            <Link href="/"><h1 className="font-bold text-white text-2xl">Weather App</h1></Link>
         </div>
     )
 }
