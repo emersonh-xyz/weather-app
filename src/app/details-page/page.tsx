@@ -11,7 +11,7 @@ export default function Details() {
         <div className="md:col-span-2">
           <Card className="h-full p-2.5 flex flex-col">
             <p>Hourly Forecast</p>
-            <div className="flex gap-2 overflow-scroll justify-between grow">
+            <div className="flex gap-2 overflow-scroll overflow-y-hidden justify-between grow">
               <div className="forecast-item"><p>10 a.m.</p></div>
               <div className="forecast-item"><p>10 a.m.</p></div>
               <div className="forecast-item"><p>10 a.m.</p></div>
@@ -30,7 +30,7 @@ export default function Details() {
         <div className="md:col-span-2">
           <Card className="h-full p-2.5 flex flex-col">
             <p>Week Forecast</p>
-            <div className="flex gap-2 overflow-scroll justify-between grow">
+            <div className="flex gap-2 overflow-scroll overflow-y-hidden justify-between grow">
               <div className="forecast-item"><p>Wednesday</p></div>
               <div className="forecast-item"><p>Thursday</p></div>
               <div className="forecast-item"><p>Friday</p></div>
@@ -45,34 +45,34 @@ export default function Details() {
       <div className="bg-[#5BB8EB] w-full grow">
         <div className="grid md:grid-cols-6 grid-cols-2 grid-rows-2 px-8 sm:px-16 xl:px-64 pt-2 gap-4">
           <Card className="col-span-2 p-2.5 details-card">
-            <p>Hi</p>
+            <p>Summary</p>
           </Card>
           <Card className="details-card">
-            <p>hi</p>
+            <p>Rain</p>
           </Card>
           <Card className="details-card">
-            <p>hi</p>
+            <p>Humidity</p>
           </Card>
           <Card className="details-card">
-            <p>hi</p>
+            <p>Clouds</p>
           </Card>
           <Card className="details-card">
-            <p>hi</p>
+            <p>Moon Phase</p>
           </Card>
           <Card className="col-span-2 details-card">
-            <p>Hi</p>
+            <p>Sunrise and Sunset</p>
+          </Card>
+          <Card className="details-card">
+            <p>Wind speed</p>
+          </Card>
+          <Card className="details-card">
+            <p>Wind Direction</p>
           </Card>
           <Card className="details-card">
             <p>hi</p>
           </Card>
           <Card className="details-card">
-            <p>hi</p>
-          </Card>
-          <Card className="details-card">
-            <p>hi</p>
-          </Card>
-          <Card className="details-card">
-            <p>hi</p>
+            <p>UV Index</p>
           </Card>
         </div>
       </div>
