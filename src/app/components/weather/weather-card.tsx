@@ -3,17 +3,18 @@ import { Sun } from "lucide-react";
 
 
 
-export default function WeatherCard({ location, temperature, rainChance }: { location: string, temperature: number, rainChance: number }) {
+export default function WeatherCard({ location, temperature, high, low }: { location: string, temperature: number, high: number, low: number }) {
     return (
-        <Card className="">
+        <Card className="h-full flex flex-col justify-center">
             <CardHeader className="items-center">
-                <CardTitle className="text-3xl">{location}</CardTitle>
+                <CardTitle className="text-3xl">{ location }</CardTitle>
             </CardHeader>
-            <CardContent className="items-start justify-between flex gap-10">
+            <CardContent className="items-start justify-center flex gap-10">
                 <Sun className="w-20 h-20" />
                 <div>
-                    <h1 className="text-4xl font-bold">{temperature}</h1>
-                    <h2 className="text-sm">{rainChance}% chance of rain</h2>
+                    <h1 className="text-4xl font-bold">{ temperature }°</h1>
+                    <h2 className="text-sm">High: { high }</h2>
+                    <h2 className="text-sm">Low: { low }</h2>
                 </div>
             </CardContent>
             <CardFooter className="flex justify-between">

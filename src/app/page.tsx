@@ -15,11 +15,11 @@ export default function Home() {
         }}
           className="w-full" >
           <CarouselContent >
-            <CarouselItem className="lg:basis-1/4"><Link href="/details-page"><WeatherCard location="London" temperature={20} rainChance={30} /></Link> </CarouselItem >
-            <CarouselItem className="lg:basis-1/4"><WeatherCard location="New York" temperature={25} rainChance={20} /></CarouselItem >
-            <CarouselItem className="lg:basis-1/4"><WeatherCard location="Paris" temperature={30} rainChance={10} /></CarouselItem >
-            <CarouselItem className="lg:basis-1/4"><WeatherCard location="Berlin" temperature={15} rainChance={40} /></CarouselItem >
-            <CarouselItem className="lg:basis-1/4"><WeatherCard location="Tokyo" temperature={25} rainChance={20} /></CarouselItem >
+            <CarouselItem className="lg:basis-1/4"><Link href="/details-page"><WeatherCard location="London" temperature={20} high={24} low={16} /></Link> </CarouselItem >
+            <CarouselItem className="lg:basis-1/4"><WeatherCard location="New York" temperature={25} high={24} low={16} /></CarouselItem >
+            <CarouselItem className="lg:basis-1/4"><WeatherCard location="Paris" temperature={30} high={24} low={16} /></CarouselItem >
+            <CarouselItem className="lg:basis-1/4"><WeatherCard location="Berlin" temperature={15} high={24} low={16} /></CarouselItem >
+            <CarouselItem className="lg:basis-1/4"><WeatherCard location="Tokyo" temperature={25} high={24} low={16} /></CarouselItem >
           </CarouselContent >
           <CarouselPrevious />
           <CarouselNext />
