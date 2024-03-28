@@ -27,8 +27,19 @@ export default function Home() {
         </Carousel>
 
       </section>
-      <section className="bg-[#5BB8EB] w-full h-screen items-center flex">
-
+      <section className="bg-[#5BB8EB] w-full h-screen">
+        <div className="px-8 sm:px-16 xl:px-64 pt-2">
+          <h1>Weather News</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Card className="news-card">
+              <p>Title</p>
+              <p>Body Preview goes here</p>
+            </Card>
+            <Card className="news-card"></Card>
+            <Card className="news-card"></Card>
+            <Card className="news-card"></Card>
+          </div>
+        </div>
       </section>
     </main>
   );

@@ -82,4 +82,7 @@
   .forecast-item {
     @apply p-1;
   }
+  .news-card {
+    @apply p-2.5 h-24;
+  }
 }
