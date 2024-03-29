@@ -74,3 +74,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .details-card {
+    @apply p-2.5 h-24;
+  }
+  .forecast-item {
+    @apply p-1;
+  }
+  .news-card {
+    @apply p-3 h-24;
+  }
+}
