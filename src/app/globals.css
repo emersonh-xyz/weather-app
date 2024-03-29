@@ -83,6 +83,6 @@
     @apply p-1;
   }
   .news-card {
-    @apply p-2.5 h-24;
+    @apply p-3 h-24;
   }
 }
