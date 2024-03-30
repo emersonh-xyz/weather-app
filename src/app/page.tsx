@@ -8,7 +8,7 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main className="flex flex-col items-start justify-between ">
-      <section className="h-auto flex items-start container py-10">
+      <section className="h-auto flex items-start container py-10 px-20">
 
         <Carousel opts={{
           align: "start",
@@ -23,12 +23,11 @@ export default function Home() {
           </CarouselContent >
           <CarouselPrevious />
           <CarouselNext />
-
         </Carousel>
 
       </section>
       <section className="bg-[#5BB8EB] w-full h-screen">
-        <div className="px-8 sm:px-16 xl:px-64 pt-2">
+        <div className="px-8 sm:px-16 xl:px-64 py-2">
           <h1 className="text-white">Weather News</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
             <Card className="news-card">

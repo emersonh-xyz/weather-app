@@ -13,17 +13,17 @@ export default function Details() {
             <p>Hourly Forecast</p>
             <div className="flex gap-2 overflow-scroll overflow-y-hidden justify-between grow">
               <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
+              <div className="forecast-item"><p>11 a.m.</p></div>
+              <div className="forecast-item"><p>12 p.m.</p></div>
+              <div className="forecast-item"><p>1 p.m.</p></div>
+              <div className="forecast-item"><p>2 p.m.</p></div>
+              <div className="forecast-item"><p>3 p.m.</p></div>
+              <div className="forecast-item"><p>4 p.m.</p></div>
+              <div className="forecast-item"><p>5 p.m.</p></div>
+              <div className="forecast-item"><p>6 p.m.</p></div>
+              <div className="forecast-item"><p>7 p.m.</p></div>
+              <div className="forecast-item"><p>8 p.m.</p></div>
+              <div className="forecast-item"><p>9 p.m.</p></div>
             </div>
           </Card>
         </div>
@@ -43,7 +43,7 @@ export default function Details() {
         </div>
       </div>
       <div className="bg-[#5BB8EB] w-full grow">
-        <div className="grid md:grid-cols-6 grid-cols-2 grid-rows-2 px-8 sm:px-16 xl:px-64 pt-2 gap-4">
+        <div className="grid md:grid-cols-6 grid-cols-2 grid-rows-2 px-8 sm:px-16 xl:px-64 py-2 gap-4">
           <Card className="col-span-2 p-2.5 details-card">
             <p>Summary</p>
           </Card>
