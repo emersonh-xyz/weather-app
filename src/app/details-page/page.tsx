@@ -1,6 +1,9 @@
 import WeatherCard from "../components/weather/weather-card";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import HourPredictionElement from "../components/weather/hour-prediction-element";
+import DayPredictionElement from "../components/weather/day-prediction";
 
+import { Component } from "lucide-react";
 export default function Details() {
   return (
     <div className="h-screen flex flex-col">
@@ -12,18 +15,18 @@ export default function Details() {
           <Card className="h-full p-2.5 flex flex-col">
             <p>Hourly Forecast</p>
             <div className="flex gap-2 overflow-scroll overflow-y-hidden justify-between grow">
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
-              <div className="forecast-item"><p>10 a.m.</p></div>
+              <HourPredictionElement weatherType={"clear sky"} temperature={30} hour={10} />
+              <HourPredictionElement weatherType={"clear sky"} temperature={30} hour={10} />
+              <HourPredictionElement weatherType={"clear sky"} temperature={30} hour={10} />
+              <HourPredictionElement weatherType={"clear sky"} temperature={30} hour={10} />
+              <HourPredictionElement weatherType={"clear sky"} temperature={30} hour={10} />
+              <HourPredictionElement weatherType={"clear sky"} temperature={30} hour={10} />
+              <HourPredictionElement weatherType={"clear sky"} temperature={30} hour={10} />
+              <HourPredictionElement weatherType={"clear sky"} temperature={30} hour={10} />
+              <HourPredictionElement weatherType={"clear sky"} temperature={30} hour={10} />
+              <HourPredictionElement weatherType={"clear sky"} temperature={30} hour={10} />
+              <HourPredictionElement weatherType={"clear sky"} temperature={30} hour={10} />
+              <HourPredictionElement weatherType={"clear sky"} temperature={30} hour={10} />
             </div>
           </Card>
         </div>
@@ -31,19 +34,19 @@ export default function Details() {
           <Card className="h-full p-2.5 flex flex-col">
             <p>Week Forecast</p>
             <div className="flex gap-2 overflow-scroll overflow-y-hidden justify-between grow">
-              <div className="forecast-item"><p>Wednesday</p></div>
-              <div className="forecast-item"><p>Thursday</p></div>
-              <div className="forecast-item"><p>Friday</p></div>
-              <div className="forecast-item"><p>Saturday</p></div>
-              <div className="forecast-item"><p>Sunday</p></div>
-              <div className="forecast-item"><p>Monday</p></div>
-              <div className="forecast-item"><p>Tuesday</p></div>
+              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"}/>
+              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"}/>
+              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"}/>
+              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"}/>
+              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"}/>
+              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"}/>
+              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"}/>
             </div>
           </Card>
         </div>
       </div>
       <div className="bg-[#5BB8EB] w-full grow">
-        <div className="grid md:grid-cols-6 grid-cols-2 grid-rows-2 px-8 sm:px-16 xl:px-64 pt-2 gap-4">
+        <div className="grid md:grid-cols-6 grid-cols-2 grid-rows-2 px-8 sm:px-16 xl:px-64 py-2 gap-4">
           <Card className="col-span-2 p-2.5 details-card">
             <p>Summary</p>
           </Card>
