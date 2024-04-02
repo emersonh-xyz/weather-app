@@ -1,6 +1,6 @@
 import { Sun,CloudSun,Cloudy,CloudDrizzle,CloudRain,CloudLightning,CloudFog,CloudSnow } from "lucide-react";
 
-export default function HourPredictionElement({ weatherType, temperature, hour }: { weatherType: string, temperature: number, hour: number }) {
+export default function DayPredictionElement({ weatherType, high, low, day }: { weatherType: string, high: number, low: number, day:string }) {
   const icons = {
     "clear sky":Sun,
     "few clouds":CloudSun,
@@ -16,11 +16,14 @@ export default function HourPredictionElement({ weatherType, temperature, hour }
 
   return (
     <>
-      <div className="flex flex-col items-center w-[48px]">
-        <p className="text-sm">{ hour }</p>
-        <WeatherIcon />
-        <p>{ temperature }°</p>
+    <div className="flex flex-col items-center w-[48px]">
+      <p className="text-sm">{ day }</p>
+      <WeatherIcon />
+      <div className="flex">
+        <p>{ high }°</p>
+        <p>{ low }°</p>
       </div>
+    </div>
     </>
   )
 }
