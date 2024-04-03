@@ -1,15 +1,33 @@
+'use client';
+
 import WeatherCard from "../components/weather/weather-card";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import HourPredictionElement from "../components/weather/hour-prediction-element";
 import DayPredictionElement from "../components/weather/day-prediction";
+import { useSearchParams } from 'next/navigation'
+import { useEffect } from "react";
 
-import { Component } from "lucide-react";
+
+
 export default function Details() {
+
+  const searchParams = useSearchParams();
+
+  const city = searchParams.get('city');
+  const state = searchParams.get('state');
+
+  useEffect(() => {
+
+  }, [])
+
+
+  if (!city || !state) return (<div>City and State not found</div>)
+
   return (
     <div className="h-screen flex flex-col">
       <div className="grid grid-rows-3 md:grid-rows-2 pt-4 px-8 sm:px-16 xl:px-64 pb-2 gap-4 grid-cols-1 md:grid-cols-3">
         <div className="row-span-2">
-          <WeatherCard location="London" temperature={20} high={24} low={16}/>
+          <WeatherCard city={city} state={state} />
         </div>
         <div className="md:col-span-2">
           <Card className="h-full p-2.5 flex flex-col">
@@ -34,13 +52,13 @@ export default function Details() {
           <Card className="h-full p-2.5 flex flex-col">
             <p>Week Forecast</p>
             <div className="flex gap-2 overflow-scroll overflow-y-hidden justify-between grow">
-              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"}/>
-              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"}/>
-              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"}/>
-              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"}/>
-              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"}/>
-              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"}/>
-              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"}/>
+              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"} />
+              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"} />
+              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"} />
+              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"} />
+              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"} />
+              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"} />
+              <DayPredictionElement weatherType={"clear sky"} high={50} low={40} day={"Friday"} />
             </div>
           </Card>
         </div>
