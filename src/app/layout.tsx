@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavMenu from "./components/nav-menu";
+import { Providers } from "./providers/NextUIProvider"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,10 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-sky-500 `}>
-        <NavMenu />
-        {children}
+      <body className={`${inter.className}`}>
+        <Providers>
+          <NavMenu />
+          {children}
+        </Providers>
       </body>
-    </html>
+    </html >
   );
 }

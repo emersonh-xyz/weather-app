@@ -1,61 +1,35 @@
-'use client';
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Sun } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import OpenWeatherMap from 'openweathermap-ts';
-import getWeatherByCity from "@/app/util/weather";
-import { CurrentResponse } from "openweathermap-ts/dist/types";
+import Image from "next/image";
 
-export default function WeatherCard({ city, state }: { city: string, state: string }) {
-
-    const [cityWeather, setCityWeather] = useState<CurrentResponse>();
-    const [geoLocation, setGeoLocation] = useState<any>();
+export default async function WeatherCard({ city, state }: { city: string, state: string }) {
 
     const openWeather = new OpenWeatherMap({
         apiKey: '8cd1dcd8bb1f10d32c6b16980f7fcafb'
     });
 
+    const cityWeather = await openWeather.getCurrentWeatherByCityName({
+        cityName: city,
+        state: state
+    });
 
-    async function getWeatherByCity(city: string) {
-        const data = await openWeather.getCurrentWeatherByCityName({
-            cityName: city,
-            state: 'north carolina'
-        });
-        console.log(data);
-        return data;
+    console.log(cityWeather)
 
-    }
-
-
-    useEffect(() => {
-
-        getWeatherByCity(city).then(data =>
-            setCityWeather(data)
-        );
-
-    }, [city])
+    const weather = cityWeather.weather[0]
 
     return (
-        <Card className="h-full flex flex-col justify-center">
-            <CardHeader className="items-center">
-                <CardTitle className="text-xl">{cityWeather?.name}, {state}</CardTitle>
+        <Card className="h-full flex flex-col justify-center bg-blue-500 border-none drop-sahdow-md drop-shadow-md text-white animate-in transition-all">
+            <CardHeader className="items-start">
+                <CardTitle className="text-md animate-in font-medium">{cityWeather?.name}, {state}</CardTitle>
             </CardHeader>
-            <CardContent className="items-start justify-center flex gap-10">
-                <Sun className="w-20 h-20" />
+            <CardContent className="items-start flex justify-start">
+                <Image key={weather.id} className="antialiased" width={75} height={75} src={`http://openweathermap.org/img/wn/${weather.icon}.png`} alt={weather.description} />
                 <div>
-                    <h1 className="text-4xl font-bold">{cityWeather?.main.temp}</h1>
-                    {cityWeather?.weather.map((weather) => {
-                        return (
-                            <h2 className="text-sm">{weather.icon}</h2>
-                        )
-
-                    })}
-                    <h2 className="text-sm"></h2>
+                    <h1 className="text-4xl font-bold">{Math.floor(cityWeather?.main.temp!)}°</h1>
+                    <h2 className="text-md">{weather.description}</h2>
                 </div>
             </CardContent>
-            <CardFooter className="flex justify-between">
-            </CardFooter>
         </Card>
     )
 }
